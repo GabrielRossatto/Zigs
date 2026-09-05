@@ -802,36 +802,40 @@ section { position: relative; padding: 130px 0; }
   padding: 90px 0;
   background: var(--emp-highlight-bg);
 }
-.emp-highlight-head { text-align: left; max-width: 620px; margin: 0 0 50px; }
+.emp-highlight-head { text-align: left; max-width: 820px; margin: 0 0 50px; }
 .emp-highlight-head h2 {
   font-family: 'Montserrat', var(--font-body);
   font-weight: 600;
   font-size: clamp(1.3rem, 2.4vw, 1.7rem);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--white);
   display: inline-block;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(255,255,255,0.4);
 }
-.emp-highlight-head p { margin-top: 16px; color: var(--white-dim); }
+.emp-highlight-head p {
+  margin-top: 16px;
+  color: var(--white-dim);
+  font-family: 'Montserrat', var(--font-body);
+}
 .emp-highlight-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 24px;
 }
 .emp-highlight-card {
   background: var(--emp-accent-soft);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 14px;
 }
 .emp-highlight-card img {
   display: block;
   width: 100%;
-  height: 360px;
+  height: 480px;
   object-fit: cover;
   border: 4px solid #fff;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 /* ---- section rule title (galeria / plantas) ---- */
@@ -931,6 +935,13 @@ section { position: relative; padding: 130px 0; }
   margin-bottom: 40px;
 }
 .plan-block:last-child { margin-bottom: 0; }
+.plans-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+.plans-row .plan-block { margin-bottom: 0; }
 .plan-block img {
   display: block;
   max-width: min(100%, 620px);
@@ -977,6 +988,7 @@ section { position: relative; padding: 130px 0; }
   .gallery-carousel { gap: 10px; }
   .gallery-side { width: 70px; }
   .gallery-arrow { width: 38px; height: 38px; font-size: 1.1rem; }
+  .plans-row { grid-template-columns: 1fr; }
 }
 
 /* ===== RESPONSIVE ===== */

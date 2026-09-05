@@ -828,7 +828,6 @@ section { position: relative; padding: 130px 0; }
 }
 .emp-highlight-card {
   background: var(--emp-accent-soft);
-  border-radius: 0;
   padding: 14px;
 }
 .emp-highlight-card img {

@@ -13,10 +13,21 @@
 <style>
 /* TODO amanhã: ajustar as 3 cores do River Marine (placeholder azul, combina com o nome, ainda não confirmado) */
 :root {
-  --emp-accent: #5C7A8A;
-  --emp-accent-soft: #8FAAB8;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --emp-accent: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.08)" d="M -100,250 C 200,450 500,100 1100,200 L 1100,-100 L -100,-100 Z"/><path fill="rgba(255,255,255,0.05)" d="M -100,380 C 150,220 300,500 1100,100 L 1100,-100 L -100,-100 Z"/><path fill="rgba(255,255,255,0.04)" d="M -100,500 C 200,300 450,550 1100,350 L 1100,700 L -100,700 Z"/></svg>'),
+  linear-gradient(135deg, #2b4f62 0%, #173240 50%, #0e202b 100%);
+  --emp-accent-soft: none;
   --emp-highlight-bg: #7C9CAB;
 }
+.emp-hero-tags { margin-top: 20px; margin-bottom: 0; }
+.emp-hero-tags span { background: none; border: none; color: #fff; }
+.emp-highlight-card { background: transparent; padding: 0; }
+.emp-specs-image img {height: 666px;}
+.emp-intro-title {letter-spacing: 0.1rem}
+.emp-intro-lead .emp-intro-title  { color: #365264; }
+
+
 </style>
 </head>
 <body>
@@ -31,8 +42,8 @@
   <div class="emp-hero-content container">
     <h1 class="emp-hero-title reveal"><img class="emp-hero-logo" src="../assets/empreendimentos/river-marine/logo.png" alt="River Marine"></h1>
     <div class="emp-hero-tags reveal">
-      <span>[TODO: diferencial principal]</span>
-      <span>Porto Belo — SC</span>
+      <span>HOME CLUB</span>
+      <span>TIJUCAS</span>
     </div>
   </div>
   <a href="#sobre-river-marine" class="scroll-indicator" aria-label="Rolar para baixo">
@@ -45,8 +56,8 @@
   <div class="container">
     <div class="emp-intro-lead">
       <p class="eyebrow reveal emp-eyebrow">River Marine</p>
-      <h2 class="section-title emp-intro-title reveal">[TODO: frase de efeito sobre o conceito<br> do River Marine.]</h2>
-      <p class="reveal">[TODO: parágrafo curto de apoio,<br> 1-2 linhas.]</p>
+      <h2 class="section-title emp-intro-title reveal">O LUXO DO LITORAL COM O CONFORTO DO SEU LAR, <br> VEM AÍ O MAIS COMPLETO HOME CLUB DE TIJUCAS.</h2>
+      <p class="reveal">Um novo eixo de valorização e qualidade de vida.</p>
     </div>
 
     <div class="emp-specs-grid">
@@ -54,21 +65,28 @@
         <div class="emp-specs-col">
           <h3>Diferenciais</h3>
           <ul>
-            <li>[TODO: diferencial 1]</li>
-            <li>[TODO: diferencial 2]</li>
-            <li>[TODO: diferencial 3]</li>
-            <li>[TODO: diferencial 4]</li>
+            <li>Padrão construtivo excepcional</li>
+            <li>Apartamentos com 4 suítes</li>
+            <li>e até 4 vagas de garagem</li>
+            <li>Área de lazer completa com mais de 2.000m2</li>
+            <li>Restaurante aberto ao público com acesso náutico</li>
           </ul>
         </div>
         <div class="emp-specs-col">
           <h3>Características</h3>
           <ul>
-            <li>[TODO: nº de pavimentos]</li>
-            <li>[TODO: unidades por andar]</li>
-            <li>[TODO: opções de plantas]</li>
-            <li>[TODO: vagas de garagem]</li>
-            <li>[TODO: elevadores]</li>
-            <li>[TODO: fachada / acabamento]</li>
+            <li>Hall de entrada mobiliado e decorado;</li>
+            <li>02 elevadores;</li>
+            <li>Som ambiente em todas as áreas comuns;</li>
+            <li>Pontos de espera para carregamento de carros elétricos, 1 vaga por apto;</li>
+            <li>Sistema de aquecimento à gás;</li>
+            <li>Sistema de segurança por câmera e portaria 24 horas;</li>
+            <li>02 apartamentos por andar;</li>
+            <li>Living com Churrasqueira a carvão;</li>
+            <li>Mais de 2.000 m2 de área de lazer;</li>
+            <li>Deck com restaurante e acesso à vaga náutica privativa;</li>
+            <li>4 suítes e até 04 vagas de garagens + uma vaga náutica (jet ski)</li>
+            <li>Alto padrão de acabamento;</li>
           </ul>
         </div>
       </div>
@@ -83,8 +101,12 @@
 <section class="emp-highlight">
   <div class="container">
     <div class="emp-highlight-head reveal">
-      <h2>[TODO: título do destaque de lazer]</h2>
-      <p>[TODO: parágrafo de apoio do destaque,<br> 1-2 linhas.]</p>
+      <h2>MARINA PRIVATIVA</h2>
+      <p>A marina do River Marine é um convite à liberdade, à aventura e à
+        sofisticação. Com estrutura pensada para acesso rápido e seguro,
+        os moradores podem sair de casa direto para o rio, com total
+        comodidade, em qualquer dia da semana.
+      </p>
     </div>
     <div class="emp-highlight-grid reveal">
       <div class="emp-highlight-card">
@@ -132,20 +154,20 @@
     </div>
 
     <div class="plan-block reveal">
-      <img src="../assets/empreendimentos/river-marine/planta-lazer.jpg" alt="Planta do pavimento de lazer do River Marine">
-      <span class="plan-label">Lazer</span>
+      <img src="../assets/empreendimentos/river-marine/planta-lazer.png" alt="Planta do pavimento de lazer do River Marine">
+      <span class="plan-label"><strong>LAZER </strong></span>
     </div>
 
     <div class="plan-block reveal">
-      <img src="../assets/empreendimentos/river-marine/planta-apartamentos.jpg" alt="Plantas dos apartamentos do River Marine">
+      <img src="../assets/empreendimentos/river-marine/planta-apartamentos.png" alt="Plantas dos apartamentos do River Marine">
       <div class="plan-specs">
         <div>
-          <strong>[TODO: tipo 1]</strong>
-          <span>[TODO: por andar · m² privativos · vagas]</span>
+          <strong>TIPO UM</strong>
+          <span>5 suítes <br> Até 4 vagas <br> 1 vaga náutica <br> Mais de 180m² privados</span>  
         </div>
         <div>
-          <strong>[TODO: tipo 2]</strong>
-          <span>[TODO: por andar · m² privativos · vagas]</span>
+          <strong>TIPO DOIS</strong>
+          <span>4 suítes <br> Até 4 vagas <br> 1 vaga náutica <br> Mais de 180m² privativos</span>
         </div>
       </div>
     </div>

@@ -286,6 +286,14 @@ ul { list-style: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  pointer-events: none;
+}
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-internal-media-controls-overlay-cast-button {
+  display: none !important;
+  -webkit-appearance: none;
 }
 .hero-fallback {
   position: absolute;
@@ -516,6 +524,9 @@ section { position: relative; padding: 130px 0; }
   gap: 28px;
 }
 .enterprise-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
@@ -529,9 +540,11 @@ section { position: relative; padding: 130px 0; }
 }
 .enterprise-media {
   position: relative;
-  height: 380px;
+  height: 520px;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  text-align: center;
   padding: 28px;
   overflow: hidden;
   background-size: cover;
@@ -541,16 +554,23 @@ section { position: relative; padding: 130px 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.7));
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.75));
 }
 .ph-tag {
   position: relative;
   z-index: 1;
   font-family: var(--font-display);
-  font-size: 1.7rem;
+  font-size: 2.1rem;
   font-weight: 600;
+  letter-spacing: 0.03em;
   color: var(--white);
+  text-shadow: 0 4px 18px rgba(0,0,0,0.55);
 }
+.cover-vogue { background-image: url('../assets/empreendimentos/vogue/fachada.jpg'); }
+.cover-vortex { background-image: url('../assets/empreendimentos/vortex/fachada.jpg'); }
+.cover-river-marine { background-image: url('../assets/empreendimentos/river-marine/fachada.jpg'); }
+.cover-ocean-avenue-towers { background-image: url('../assets/empreendimentos/ocean-avenue-towers/fachada.jpg'); }
+.cover-wine-tower { background-image: url('../assets/empreendimentos/wine-tower/fachada.jpg'); }
 .ph-1 { background: linear-gradient(135deg, #1f4823, #1D2026 70%); }
 .ph-2 { background: linear-gradient(135deg, #235424, #1D2026 70%); }
 .ph-3 { background: linear-gradient(135deg, #1a3e22, #1D2026 70%); }
@@ -661,6 +681,306 @@ section { position: relative; padding: 130px 0; }
 }
 .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
 
+/* ===========================
+   EMPREENDIMENTO — PAGE TEMPLATE
+
+   Per-project accent colors. Each page overrides these three
+   variables in its own <head> (inline <style>:root{...}</style>)
+   to reskin the template without touching this shared stylesheet.
+   Defaults below are Vogue's current palette.
+=========================== */
+:root {
+  --emp-accent: #95846A;       /* eyebrow text + line above it */
+  --emp-accent-soft: #BBA37C;  /* intro title + highlight cards bg */
+  --emp-highlight-bg: #BB9E7C; /* "mais de 1.000m² de lazer" section bg */
+}
+
+/* ---- emp hero ---- */
+.emp-hero {
+  position: relative;
+  height: 88vh;
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.emp-hero-media { position: absolute; inset: 0; z-index: 0; }
+.emp-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.emp-hero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(29,32,38,0.62) 0%, rgba(29,32,38,0.62) 55%, rgba(29,32,38,0.96) 100%);
+}
+.emp-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 90px;
+  text-align: center;
+}
+.emp-hero-title { display: inline-block; }
+.emp-hero-logo {
+  width: min(420px, 70vw);
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+.emp-hero-tags {
+  margin-top: -45px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.emp-hero-tags span {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* ---- intro / specs ---- */
+.emp-intro-lead { max-width: 700px; margin: 0 auto 64px; text-align: center; }
+.emp-intro-lead p { margin-top: 18px; color: rgba(29,32,38,0.7); font-size: 1.05rem; letter-spacing: 0.04em; }
+.emp-intro-lead .emp-eyebrow { color: var(--emp-accent); }
+.emp-intro-title { font-size: 20px; text-transform: uppercase; letter-spacing: 0.06em; }
+.emp-intro-lead .emp-intro-title,
+.emp-intro-lead .emp-intro-title .text-green { color: var(--emp-accent-soft); }
+.emp-intro-lead .emp-eyebrow {
+  position: relative;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  letter-spacing: 0.06em;
+  padding-top: 28px;
+}
+.emp-intro-lead .emp-eyebrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 1px;
+  background: var(--emp-accent);
+}
+
+.emp-specs-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1.3fr;
+  gap: 0;
+  align-items: start;
+}
+.emp-specs-text {
+  background: #F5F5F5;
+  border-radius: 12px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.emp-specs-col h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--black);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #A8A8A8;
+}
+.emp-specs-col ul { display: grid; gap: 14px; }
+.emp-specs-col li {
+  font-size: 0.92rem;
+  color: rgba(29,32,38,0.72);
+  line-height: 1.5;
+}
+.emp-specs-image { border-radius: 10px; overflow: hidden; min-height: 460px; }
+.emp-specs-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- highlight band ---- */
+.emp-highlight {
+  padding: 90px 0;
+  background: var(--emp-highlight-bg);
+}
+.emp-highlight-head { text-align: left; max-width: 620px; margin: 0 0 50px; }
+.emp-highlight-head h2 {
+  font-family: 'Montserrat', var(--font-body);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  display: inline-block;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.emp-highlight-head p { margin-top: 16px; color: var(--white-dim); }
+.emp-highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.emp-highlight-card {
+  background: var(--emp-accent-soft);
+  border-radius: 16px;
+  padding: 14px;
+}
+.emp-highlight-card img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  border-radius: 8px;
+}
+
+/* ---- section rule title (galeria / plantas) ---- */
+.rule-title {
+  display: inline-block;
+  font-family: 'Montserrat', var(--font-body);
+  color: #595959;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+  position: relative;
+}
+.rule-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 1px;
+  background: #595959;
+}
+
+/* ---- gallery carousel ---- */
+.gallery-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1180px;
+  margin: 0 auto;
+  height: clamp(300px, 34vw, 460px);
+}
+.gallery-side {
+  flex-shrink: 0;
+  width: 180px;
+  height: 100%;
+  align-self: flex-start;
+  margin-top: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.35;
+}
+.gallery-side img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--black-soft);
+}
+.gallery-viewport img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.gallery-viewport img.active { opacity: 1; }
+.gallery-arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(29,32,38,0.18);
+  background: var(--white);
+  color: var(--black);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.gallery-arrow:hover { background: var(--green); border-color: var(--green); }
+
+/* ---- plantas ---- */
+.emp-plans { padding-top: 30px; }
+.plan-block {
+  background: #F5F5F5;
+  border-radius: 12px;
+  padding: 48px 40px;
+  margin-bottom: 40px;
+}
+.plan-block:last-child { margin-bottom: 0; }
+.plan-block img {
+  display: block;
+  max-width: min(100%, 620px);
+  height: auto;
+  margin: 0 auto;
+}
+.plan-label {
+  display: block;
+  text-align: center;
+  margin-top: 28px;
+  font-family: 'Montserrat', var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #7D7D7D;
+}
+.plan-specs {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.plan-specs > div { flex: 1; min-width: 220px; }
+.plan-specs > div:last-child { text-align: right; }
+.plan-specs strong {
+  display: block;
+  font-family: 'Montserrat', var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #7D7D7D;
+  margin-bottom: 8px;
+}
+.plan-specs span { font-size: 0.85rem; color: rgba(29,32,38,0.6); }
+
+@media (max-width: 860px) {
+  .emp-specs-grid { grid-template-columns: 1fr; }
+  .emp-specs-text { grid-template-columns: 1fr; padding: 26px; }
+  .emp-specs-image { min-height: 280px; }
+  .emp-highlight-grid { grid-template-columns: 1fr; }
+  .gallery-carousel { gap: 10px; }
+  .gallery-side { width: 70px; }
+  .gallery-arrow { width: 38px; height: 38px; font-size: 1.1rem; }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: 1fr; }
@@ -710,4 +1030,6 @@ section { position: relative; padding: 130px 0; }
   .enterprise-grid { grid-template-columns: 1fr; }
   .cta-strip-inner { flex-direction: column; text-align: center; }
   .container { padding: 0 22px; }
+  .gallery-side { display: none; }
+  .gallery-viewport { width: 100%; }
 }

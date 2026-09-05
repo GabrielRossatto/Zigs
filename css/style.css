@@ -791,6 +791,7 @@ section { position: relative; padding: 130px 0; }
 }
 .emp-specs-col ul { display: grid; gap: 14px; }
 .emp-specs-col li {
+  font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.92rem;
   color: rgba(29,32,38,0.72);
   line-height: 1.5;

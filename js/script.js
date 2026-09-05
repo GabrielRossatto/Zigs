@@ -53,9 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* BACK TO TOP */
-  document.getElementById('backToTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   /* SCROLL REVEAL */
   const revealEls = document.querySelectorAll('.reveal');

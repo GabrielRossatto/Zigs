@@ -572,7 +572,6 @@ section { position: relative; padding: 130px 0; }
 .cover-ocean-avenue-towers { background-image: url('../assets/empreendimentos/ocean-avenue-towers/fachada.jpg'); }
 .cover-wine-tower { background-image: url('../assets/empreendimentos/wine-tower/fachada.jpg'); }
 .ph-1 { background: linear-gradient(135deg, #1f4823, #1D2026 70%); }
-.ph-2 { background: linear-gradient(135deg, #235424, #1D2026 70%); }
 .ph-3 { background: linear-gradient(135deg, #1a3e22, #1D2026 70%); }
 .ph-4 { background: linear-gradient(135deg, #276029, #1D2026 70%); }
 .ph-5 { background: linear-gradient(135deg, #17391e, #1D2026 70%); }
@@ -626,7 +625,6 @@ section { position: relative; padding: 130px 0; }
 .contact-list p { color: var(--white-dim); font-size: 0.92rem; }
 .contact-list a:hover { color: var(--green); }
 
-.whatsapp-btn { }
 
 .contact-map {
   border-radius: 10px;
@@ -745,17 +743,17 @@ section { position: relative; padding: 130px 0; }
 /* ---- intro / specs ---- */
 .emp-intro-lead { max-width: 700px; margin: 0 auto 64px; text-align: center; }
 .emp-intro-lead p { margin-top: 18px; color: rgba(29,32,38,0.7); font-size: 1.05rem; letter-spacing: 0.04em; }
-.emp-intro-lead .emp-eyebrow { color: var(--emp-accent); }
-.emp-intro-title { font-size: 20px; text-transform: uppercase; letter-spacing: 0.06em; }
-.emp-intro-lead .emp-intro-title,
-.emp-intro-lead .emp-intro-title .text-green { color: var(--emp-accent-soft); }
 .emp-intro-lead .emp-eyebrow {
   position: relative;
+  color: var(--emp-accent);
   font-weight: 700;
   font-size: clamp(1.4rem, 2.6vw, 2rem);
   letter-spacing: 0.06em;
   padding-top: 28px;
 }
+.emp-intro-title { font-size: 20px; text-transform: uppercase; letter-spacing: 0.06em; }
+.emp-intro-lead .emp-intro-title,
+.emp-intro-lead .emp-intro-title .text-green { color: var(--emp-accent-soft); }
 .emp-intro-lead .emp-eyebrow::before {
   content: '';
   position: absolute;

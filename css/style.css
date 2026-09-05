@@ -741,6 +741,7 @@ section { position: relative; padding: 130px 0; }
 }
 
 /* ---- intro / specs ---- */
+.emp-intro { padding-top: 70px; }
 .emp-intro-lead { max-width: 700px; margin: 0 auto 64px; text-align: center; }
 .emp-intro-lead p { margin-top: 18px; color: rgba(29,32,38,0.7); font-size: 1.05rem; letter-spacing: 0.04em; }
 .emp-intro-lead .emp-eyebrow {
@@ -780,7 +781,7 @@ section { position: relative; padding: 130px 0; }
   gap: 40px;
 }
 .emp-specs-col h3 {
-  font-family: var(--font-display);
+  font-family: 'Quiche', 'Cormorant Garamond', Georgia, serif;
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--black);

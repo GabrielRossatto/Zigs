@@ -16,6 +16,8 @@
   --emp-accent: #8A4F8A;
   --emp-accent-soft: #8A4F8A;
   --emp-highlight-bg: #8b4f8b;
+  --plan-img-size: min(500px, 400px);
+
 }
 .emp-hero-img { filter: saturate(1.2) brightness(0.5); }
 .emp-hero-tags span { background: none; border: none; color: #fff;  }
@@ -24,15 +26,15 @@
 </head>
 <body>
 
-<div class="preloader" id="preloader"><img src="../assets/logo/zig-logo.png" alt="Zig Empreendimentos" class="preloader-logo"></div>
+<div class="preloader" id="preloader"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/logo/zig-logo.png" alt="Zig Empreendimentos" class="preloader-logo"></div>
 
 <!-- HERO -->
 <section class="emp-hero">
   <div class="emp-hero-media">
-    <img class="emp-hero-img" src="../assets/empreendimentos/ocean-avenue-towers/hero.jpg" alt="Ocean Avenue Towers — [TODO: descrever a cena]">
+    <img class="emp-hero-img" src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/hero.jpg" alt="Ocean Avenue Towers — [TODO: descrever a cena]">
   </div>
   <div class="emp-hero-content container">
-    <h1 class="emp-hero-title reveal"><img class="emp-hero-logo" src="../assets/empreendimentos/ocean-avenue-towers/logo.png" alt="Ocean Avenue Towers"></h1>
+    <h1 class="emp-hero-title reveal"><img class="emp-hero-logo" src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/logo.png" alt="Ocean Avenue Towers"></h1>
     <div class="emp-hero-tags reveal">
       <span>HOME CLUB</span>
       <span>Porto Belo — SC</span>
@@ -105,10 +107,10 @@
     </div>
     <div class="emp-highlight-grid reveal">
       <div class="emp-highlight-card">
-        <img src="../assets/empreendimentos/ocean-avenue-towers/lazer-1.jpg" alt="Fachada da obra">
+        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/lazer-1.jpg" alt="Fachada da obra">
       </div>
       <div class="emp-highlight-card">
-        <img src="../assets/empreendimentos/ocean-avenue-towers/lazer-2.jpg" alt="[TODO: alt da imagem de lazer 2]">
+        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/lazer-2.jpg" alt="[TODO: alt da imagem de lazer 2]">
       </div>
     </div>
   </div>
@@ -124,7 +126,7 @@
     <div class="gallery-carousel reveal" data-gallery>
       <button class="gallery-arrow gallery-prev" aria-label="Imagem anterior">‹</button>
       <div class="gallery-side gallery-side-prev">
-        <img data-gallery-prev src="../assets/empreendimentos/ocean-avenue-towers/galeria-5.jpg" alt="Imagem anterior">
+        <img data-gallery-prev src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/galeria-5.jpg" alt="Imagem anterior">
       </div>
       <div class="gallery-viewport">
         <img data-gallery-image class="active" src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/galeria-1.jpg" alt="[TODO: alt galeria 1]">
@@ -135,7 +137,6 @@
         <img data-gallery-image src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/galeria-7.jpg" alt="[TODO: alt galeria 2]">
         <img data-gallery-image src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/galeria-8.jpg" alt="[TODO: alt galeria 2]">
         <img data-gallery-image src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/galeria-9.jpg" alt="[TODO: alt galeria 2]">
-        <img data-gallery-image src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/galeria-10.jpg" alt="[TODO: alt galeria 2]">
 
       
       
@@ -163,6 +164,53 @@
     <div class="plan-block reveal">
       <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/planta-apartamentos.png" alt="Plantas dos apartamentos do Ocean Avenue Towers">
       <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/ocean-tower/planta-apartamentos-2.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact section-light" id="contato">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Contato</p>
+      <h2 class="section-title">Vamos construir uma história <span class="text-green">juntos.</span></h2>
+
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon">📍</span>
+          <div>
+            <strong>Localização</strong>
+            <p>Rua Rubens Alves, nº 426 — Balneário Perequê, Porto Belo - SC</p>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">📞</span>
+          <div>
+            <strong>Telefone / WhatsApp</strong>
+            <p>(47) 3430-0198</p>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">📷</span>
+          <div>
+            <strong>Instagram</strong>
+            <p><a href="https://www.instagram.com/zigempreendimentos" target="_blank" rel="noopener">@zigempreendimentos</a></p>
+          </div>
+        </li>
+      </ul>
+
+      <a href="https://wa.me/554734300198" target="_blank" rel="noopener" class="btn btn-primary">
+        Falar no WhatsApp
+      </a>
+    </div>
+
+    <div class="contact-map reveal">
+      <iframe
+        title="Localização Ocean Avenue Towers"
+        src="https://maps.google.com/maps?q=Rua%20Rubens%20Alves%2C%20426%2C%20Porto%20Belo%20-%20SC&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </section>

@@ -64,6 +64,7 @@
   --font-body: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --container: 1200px;
   --transition: 0.4s cubic-bezier(.25,.8,.25,1);
+  --plan-img-size: min(500px, 500px);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1023,7 +1024,7 @@ section { position: relative; padding: 130px 0; }
 .plan-block {
   background: #F5F5F5;
   border-radius: 12px;
-  padding: 48px 40px;
+  padding: 28px 32px;
   margin-bottom: 40px;
 }
 .plan-block:last-child { margin-bottom: 0; }
@@ -1031,12 +1032,13 @@ section { position: relative; padding: 130px 0; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  align-items: start;
+  align-items: stretch;
 }
 .plans-row .plan-block { margin-bottom: 0; }
 .plan-block img {
   display: block;
-  max-width: min(80%, 400px);
+  width: 100%;
+  max-width: var(--plan-img-size);
   height: auto;
   margin: 0 auto;
   cursor: zoom-in;
@@ -1084,8 +1086,8 @@ section { position: relative; padding: 130px 0; }
 .plan-lightbox-close:hover { background: rgba(255, 255, 255, 0.2); }
 .plan-label {
   display: block;
-  text-align: center;
-  margin-top: 28px;
+  text-align: left;
+  margin-top: 4px;
   font-family: 'Montserrat', var(--font-body);
   font-weight: 700;
   font-size: 1.05rem;
@@ -1115,17 +1117,23 @@ section { position: relative; padding: 130px 0; }
 .plan-specs span { font-size: 0.95rem; color: var(--black); }
 
 /* apartments plan with type labels beside the image */
-.plan-block--apartments { position: relative; }
+.plan-block--apartments {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .plan-types {
   position: absolute;
-  left: 0;
+  left: 24px;
   top: 0;
   bottom: 0;
-  width: 190px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 56px;
+  gap: 20px;
 }
 .plan-type strong {
   display: block;

@@ -19,7 +19,7 @@
   --emp-accent-soft: #9B4A56;
   --emp-highlight-bg: transparent;
   --emp-highlight-image: url('https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/background.png');
-  --plan-img-size: min(500px, 200px);
+  --plan-img-size: 300px;
 
 }
 .emp-hero-img { filter: saturate(1.2) brightness(1); }
@@ -27,6 +27,29 @@
 .emp-hero-tags span { background: none; border: none; color: #fff; }
 .emp-highlight-card { background: transparent; padding: 0; }
 .emp-specs-image img {height: 750px;}
+.emp-plans .plans-row {
+  grid-template-columns: repeat(auto-fit, 380px);
+  justify-content: center;
+  gap: 24px;
+}
+.emp-plans .plan-block { padding: 24px; }
+.emp-plans .plan-thumb {
+  height: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emp-plans .plan-thumb img {
+  max-width: min(100%, var(--plan-img-size));
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+@media (max-width: 860px) {
+  .emp-plans .plans-row { grid-template-columns: 1fr; justify-content: stretch; }
+  .emp-plans .plan-block { max-width: 380px; margin-left: auto; margin-right: auto; }
+}
 
 </style>
 </head>
@@ -165,44 +188,44 @@
 
     <div class="plans-row">
       <div class="plan-block reveal">
-        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-lazer.png" alt="Planta do pavimento de lazer do Wine Tower">
+        <div class="plan-thumb"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-lazer.png" alt="Planta do pavimento de lazer do Wine Tower"></div>
         <span class="plan-label">Lazer</span>
       </div>
 
       <div class="plan-block reveal">
-        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-1.png" alt="Planta dos apartamentos do Wine Tower">
+        <div class="plan-thumb"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-1.png" alt="Planta dos apartamentos do Wine Tower"></div>
         <span class="plan-label">Tipo 1</span>
         <p>FINAL 01 - 4 SUÍTES - 3 VAGAS - 171M² PRIVATIVOS</p>
       </div>
 
       <div class="plan-block reveal">
-        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-2.png" alt="Distribuição dos apartamentos do Wine Tower">
+        <div class="plan-thumb"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-2.png" alt="Distribuição dos apartamentos do Wine Tower"></div>
         <span class="plan-label">TIPO 2</span>
         <p>FINAL 02 - 3 SUÍTES - 2 VAGAS - 1252 PRIVATIVOS</p>
       </div>
 
       <div class="plan-block reveal">
-        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-3.png" alt="Distribuição dos apartamentos do Wine Tower">
+        <div class="plan-thumb"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-3.png" alt="Distribuição dos apartamentos do Wine Tower"></div>
         <span class="plan-label">TIPO 3</span>
         <p>FINAL 03 - 2 SUÍTES - 2 VAGAS - 94M2 PRIVATIVOS</p>
       </div>
 
       <div class="plan-block reveal">
-        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-4.png" alt="Planta da adega subterrânea do Wine Tower">
+        <div class="plan-thumb"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-4.png" alt="Planta da adega subterrânea do Wine Tower"></div>
         <span class="plan-label">TIPO 4</span>
         <p>FINAL 04 - 3 SUÍTES - 2 VAGAS
 - 130M2 PRIVATIVOS</p>
       </div>
 
       <div class="plan-block reveal">
-        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-5.png" alt="Planta da adega subterrânea do Wine Tower">
+        <div class="plan-thumb"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-apartamentos-5.png" alt="Planta da adega subterrânea do Wine Tower"></div>
         <span class="plan-label">TIPO 5</span>
         <p>FINAL 05 - 1 SUÍTE - 2 DEMI SUÍTES -
 2 VAGAS - 103M2 PRIVATIVOS</p>
       </div>
 
       <div class="plan-block reveal">
-        <img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-adega.png" alt="Planta da adega subterrânea do Wine Tower">
+        <div class="plan-thumb"><img src="https://pub-1e4fd426432e475ba497fec8ce213aea.r2.dev/wine-tower/planta-adega.png" alt="Planta da adega subterrânea do Wine Tower"></div>
         <span class="plan-label">Adega</span>
       </div>
 
